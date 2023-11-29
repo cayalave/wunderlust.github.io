@@ -1,0 +1,320 @@
+/* NAME */
+/* Sarahi Vela */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------- 2.4 - 2.5 / Assignment: Responsive Web Development CSS---------- */
+/* ------------------- GLOBAL STYLE  ------------------- */
+
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+	--fonts: Molle, cursive; Montserrat, sans-serif;
+	font-size: 16px;
+}
+
+#skip{
+	position: absolute;
+	left: -100px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+#skip:focus{
+	position: static;
+	width: auto;
+	height: auto;
+  }
+
+body{
+	font-family: var(--fonts);
+	line-height: 1.25;
+	box-sizing: border-box;
+	color: var(--black);
+	margin:0;
+  	padding:0;
+}
+
+
+header{
+	background: linear-gradient(0deg, white 35%, teal);
+	color: var(--black);
+	width: 100%;
+	padding: 2rem;
+	width: calc(100% - 2rem);
+}
+
+header div{
+	max-width: 1200px;
+  	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	grid-gab: 1rem;
+	align-items: center;
+}
+
+#logo{
+	padding: 1rem;
+}
+
+
+h1, h2, h3, h4{
+    font-family: 'Molle', cursive;
+}
+
+h1{
+    font-size: 60px;
+}
+
+h2{
+    font-size: 45px;
+}
+
+h3{
+    font-size: 35px;
+}
+
+h4{
+    font-size: 30px;
+    font-style: blackbold;
+}
+
+h4, p, q, small, nav, button, form{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.sr-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+  }
+
+nav label, #toggle {
+    visibility: hidden;
+  }
+
+  #toggle{
+    text-transform: uppercase;
+}
+
+nav{
+	grid-column: 1/ -1;
+}
+
+nav a {
+    color:var(--black);
+    padding:10px;
+    text-decoration:none;
+	text-align: center;
+	margin: 2rem 6;
+	background-color: #FFFFFF;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+  }
+
+  nav li {
+	list-style:none;
+	display: inline-block;
+  	padding: 1rem;
+  }
+
+  nav a:hover{
+    background-color: #F6D64A;
+  }
+
+q {
+ font-style: oblique;
+}
+
+blockquote, q {
+	quotes: '"' '"';
+  }
+  blockquote:before, q:before { content: open-quote; }
+  blockquote:after, q:after { content: close-quote; }
+
+#plan {
+    background-color: #F6D64A;
+}
+
+#testimonial {
+    background-color: #FFFFFF;
+}
+
+#about {
+    background-color: #499BD2;
+}
+
+#contact {
+    background-color: #FFFFFF;
+}
+
+
+main section{
+	margin: 2rem auto;
+  } 
+
+#plan section{
+	max-width: 1200px;
+	margin: 0 auto 3rem auto;
+}
+
+#plan div section {
+	display: inline-block;
+	padding: 1rem;
+	border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+	background-color: #499BD2;
+	width: 100px;
+	width: 100vw;
+	max-width: 350px;
+  	column-gap: 10px;
+  	row-gap: 15px;
+	border: 5px solid white;
+}
+
+#testimonial h3{
+	font-weight: bold;
+}
+
+#about div section{
+	display: inline-block;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 2rem 2rem 2rem 2rem;
+}
+
+#contact section{
+	display: inline-block;
+	text-align: center;
+}
+.form-required{
+	font-family: Montserrat, sans-serif;
+	font-size: 18px;
+	font-style: oblique;
+}
+
+.required{
+	color: #9B26B0;
+}
+form{
+	color: black;
+	font-weight: 600;
+	display: flex;
+	justify-content: space-around;
+	margin-left: 50px;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+}
+#contact h3{
+	display: flex;
+	display: center;
+	margin-left: 50px;
+	
+}
+#mySubmit{
+	color: white;
+	background-color: #9B26B0;
+	border: 5px solid #9B26B0;
+}
+
+input, select{
+	padding: 5px 5px;
+	margin-bottom: 15px;
+	background-color: white;
+	border: 2px solid #9B26B0;
+}
+
+
+  footer{
+	height:auto;
+	display: flex;
+	text-align:center;
+	padding-top:10px;
+	background-color: var(--light-gray);
+  }
+
+  footer p{
+	display: flex;
+	justify-content: space-around;
+	margin-left: 50px;
+  }
+  
+  footer a{
+	font-family: Montserrat, sans-serif;
+	color: black;
+	text-decoration: none;
+	justify-content: end; 
+  }
+ 
+  @media screen and (min-width: 500px){
+	header{
+		grid-template-columns: 1fr 4fr;
+		align-items: center;
+	}
+}
+
+#menu-toggle{
+	
+}
