@@ -50,9 +50,9 @@ table {
 	border-spacing: 0;
 }
 
-/* ---------- 2.4 - 2.5 / Assignment: Responsive Web Development CSS---------- */
-/* ------------------- GLOBAL STYLE  ------------------- */
+/* --- 2.4 - 2.5 / Assignment: Responsive Web Development CSS--- */
 
+/* -----------------Root Styles and Variables--------------------*/
 :root{
     --yellow: #F6D64A;
     --teal: #55BCD5;
@@ -62,10 +62,12 @@ table {
     --light-gray: #EAEAEA;
     --white: #FFFFFF;
     --black: #000000;
-	--fonts: Molle, cursive; Montserrat, sans-serif;
+	--fontMolle: 'Molle', cursive; 
+	--fontMonserrat: 'Montserrat', sans-serif;
 	font-size: 16px;
 }
 
+/* ----------------------- skyp Link  ---------------------- */
 #skip{
 	position: absolute;
 	left: -100px;
@@ -81,40 +83,39 @@ table {
 	height: auto;
   }
 
+/* ----------------------- Body Style  ---------------------- */
 body{
-	font-family: var(--fonts);
+	font-family: var(--fontMonserrat);
 	line-height: 1.25;
 	box-sizing: border-box;
 	color: var(--black);
-	margin:0;
-  	padding:0;
+	
 }
 
-
+/* ----------------------- Header Style  ---------------------- */
 header{
 	background: linear-gradient(0deg, white 35%, teal);
 	color: var(--black);
 	width: 100%;
-	padding: 2rem;
-	width: calc(100% - 2rem);
-	font-size: 25px;
-	display: flex;
-	flex-direction:column;
-	
-	justify-content: flex-end;
-}
-
-header div{
-	max-width: 1200px;
-  	margin: 0 auto;
-	align-items: center;
-	display: flex;
+	height: 300px;
+	box-sizing: border-box;
+/*--	border: 2px solid red;----*/
 }
 
 #logo{
-	padding: 1rem;
+	padding: -3rem;
 }
 
+nav{
+	height: 60px;
+	width: 100%;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--black);
+	font-family: var(--fontMonserrat), sans-serif;
+	text-decoration: none;
+}	
 
 .sr-only {
 	position: absolute;
@@ -123,21 +124,28 @@ header div{
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
-}
+} 
+
+header div nav{
+	float: right;
+	margin-right: 40px;
+	
+}	
+
 header nav label{
-    width: 100%;
+    width: 50%;
     background-color: var(--yellow);
 	font-weight: bold;
     top: 0;
 	padding: 10px;
     text-transform: uppercase;
 	text-align: center;
-	order: 1;
+	position: absolute;
+    left: 250px;
+	top: 50px;
+    padding: 16px 16px;
 }
-header nav ul {
-    text-align: center;
-    float: right;
-}
+
 header ul {
     margin: 0;
     padding: 0;
@@ -147,19 +155,11 @@ header ul {
     max-height: 0;
     transition: max-height .2s ease-out;  
 }
-li a{
-    display: block;
-    padding: 20px 20px;
-    text-decoration: none;
-    color: #ffffff;
-}
 
-#toggle{
-    text-transform: uppercase;
-}
-input {
+header input {
     display: none;
 }
+
 input:checked ~ ul {
     max-height: 600px;
 	color: var(--black);
@@ -167,17 +167,318 @@ input:checked ~ ul {
 	border: 5px solid var(--black);
 }
 
+header ul{
+	position: relative;
+	z-index: 1;
+}
+
+li a{
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
 header li a:hover, input:hover {
     background-color: var(--yellow);
 }
 
+input:checked ~ label{
+	float: right;
+}
+
+/*--------------Text Style---------------*/
 h1, h2, h3, h4{
-    font-family: 'Molle', cursive;
+    font-family: var(--fontMolle);
 }
 
 h1{
     font-size: 60px;
+	padding: 0px 20px;
+
 }
+header p{
+	padding: 10px 20px;
+	font-size: 25px;
+}
+h4, p, q, small, nav, button, form{
+    font-family: var(--fontMonserrat);
+}
+
+/*--------------Main Style---------------*/
+#intro{
+	background: var(--white);
+	color: var(--black);
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 30px;
+}
+
+#intro h2{
+	padding: 0px 20px;
+	font-size: 45px;
+}
+
+#intro p{
+	padding: 10px 20px;
+	font-size: 18px;
+}
+
+#intro img{
+	width: 100%;
+}
+
+#intro picture img{
+	width: 200%;
+}
+
+#intro picture source{
+	width: 50%;
+}
+
+/*-------------- Plan Style---------------*/
+
+#plan h3{
+	padding: 0px 20px;
+	font-size: 45px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#plan h4{
+	padding: 0px 20px;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#plan {
+    background-color: var(--yellow);
+}
+
+#plan section{
+	max-width: 1000px;
+	margin: 0 auto 3rem auto;
+}
+
+#plan div section {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+	border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+	background-color: var(--blue);
+	width: 260px;
+	height: 260px;
+	max-width: 350px;
+  	column-gap: 3px;
+  	row-gap: 7px;
+	border: 5px solid var(--white);
+	padding-left: 65px;
+	padding-top: 25px;
+}
+
+#plan div section img{
+	padding-top: 15px;
+}
+
+#plan div{
+	padding-left: 50px;
+	padding-bottom: 10px;
+}
+
+/*-------------- Testimonials Style---------------*/
+
+#testimonials h3{
+	padding: 0px 20px;
+	font-size: 45px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#testimonials h4{
+    font-size: 30px;
+    font-style: bold;
+}
+
+#testimonials {
+    background-color: var(--white);
+}
+
+blockquote, q {
+	quotes: '"' '"';
+  }
+  blockquote:before, q:before { content: open-quote; }
+  blockquote:after, q:after { content: close-quote; }
+
+#testimonials q {
+	font-style: oblique;
+   }
+
+#testimonials section{
+	display: flex;
+	flex-direction: column;
+	padding-left: 85px;
+	padding-right: 85px;
+	padding-bottom: 20px;
+}
+
+#testimonials q{
+	text-align: center;
+}
+
+#testimonials h4{
+	text-align: center;
+}
+
+#testimonials p{
+	text-align: center;
+}
+
+/*-------------- About Style---------------*/
+
+#about h3{
+	padding: 0px 20px;
+	font-size: 45px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#about {
+    background-color: var(--blue);
+}
+
+#about div section{
+  width: 100%;
+  text-align: center;
+ 
+}
+#about div{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+#about h4{
+	font-style: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+	
+}
+
+/*-------------- Contact Style---------------*/
+
+#contact {
+    background-color: var(--white);
+}
+
+#contact h3{
+	font-size: 45px;
+	padding: 0px 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+.required{
+	color: var(--purple);
+}
+
+#contact form{
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	padding-right: 50px;
+}
+
+#contact div{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+#contact fieldset{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+#contact .form-required{
+	font-family: var(--fontMonserrat);
+	font-size: 18px;
+	font-style: bold;
+}
+
+form{
+	color: var(--black);
+	font-weight: 600;
+	display: flex;
+	justify-content: space-around;
+	margin-left: 50px;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+}
+
+#mySubmit{
+	color: var(--white);
+	background-color: var(--purple);
+	border: 5px solid var(--purple);
+}
+
+input, select{
+	padding: 5px 5px;
+	margin-bottom: 15px;
+	background-color: var(--white);
+	border: 2px solid var(--purple);
+	height: 30px;
+}
+
+.radio-input input{
+	width: 70px;
+	accent-color: var(--purple);
+}
+
+/*-------------- Footer Style---------------*/
+
+footer{
+	height:150px;
+	display: flex;
+	flex-direction: column;
+	text-align:center;
+	
+	background-color: var(--light-gray);
+  }
+
+  footer p{
+	display: flex;
+	justify-content: space-around;
+	margin-left: 50px;
+	padding-top:20px;
+	padding-bottom: 20px;
+  }
+  
+  footer a{
+	font-family: var(--fontMonserrat);
+	color: var(--black);
+	text-decoration: none;
+	padding-top:10px;
+	padding-bottom: 10px;
+	
+  }
+
+/*-------------- Media 950px ---------------*/
+
+  @media screen and (min-width: 950px){
+	header{
+		grid-template-columns: 1fr 4fr;
+		align-items: center;
+		font-size: 25px;
+	}
+}
+/*---
+
 
 h2{
     font-size: 45px;
@@ -187,90 +488,12 @@ h3{
     font-size: 35px;
 }
 
-h4{
-    font-size: 30px;
-    font-style: blackbold;
-}
-
-h4, p, q, small, nav, button, form{
-    font-family: 'Montserrat', sans-serif;
-}
-
-q {
- font-style: oblique;
-}
-
-blockquote, q {
-	quotes: '"' '"';
-  }
-  blockquote:before, q:before { content: open-quote; }
-  blockquote:after, q:after { content: close-quote; }
-
-#plan {
-    background-color: #F6D64A;
-}
-
-#testimonial {
-    background-color: #FFFFFF;
-}
-
-#about {
-    background-color: #499BD2;
-}
-
-#contact {
-    background-color: #FFFFFF;
-}
-
-
 main section{
 	margin: 2rem auto;
   } 
 
-#plan section{
-	max-width: 1200px;
-	margin: 0 auto 3rem auto;
-}
 
-#plan div section {
-	display: inline-block;
-	padding: 1rem;
-	border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
-	background-color: #499BD2;
-	width: 100px;
-	width: 100vw;
-	max-width: 350px;
-  	column-gap: 10px;
-  	row-gap: 15px;
-	border: 5px solid white;
-}
-
-#testimonial h3{
-	font-weight: bold;
-}
-
-#about div section{
-	display: inline-block;
-  width: 100%;
-  max-width: 350px;
-  margin: 0 auto;
-  text-align: center;
-  border-radius: 2rem 2rem 2rem 2rem;
-}
-
-#contact section{
-	display: inline-block;
-	text-align: center;
-}
-.form-required{
-	font-family: Montserrat, sans-serif;
-	font-size: 18px;
-	font-style: oblique;
-}
-
-.required{
-	color: #9B26B0;
-}
+-------------------------- Formado para la version grande
 form{
 	color: black;
 	font-weight: 600;
@@ -281,54 +504,14 @@ form{
 	align-items: center;
 	align-content: center;
 }
-#contact h3{
-	display: flex;
-	display: center;
-	margin-left: 50px;
-	
-}
-#mySubmit{
-	color: white;
-	background-color: #9B26B0;
-	border: 5px solid #9B26B0;
-}
-
-input, select{
-	padding: 5px 5px;
-	margin-bottom: 15px;
-	background-color: white;
-	border: 2px solid #9B26B0;
-}
+---------------
 
 
-  footer{
-	height:auto;
-	display: flex;
-	text-align:center;
-	padding-top:10px;
-	background-color: var(--light-gray);
-  }
 
-  footer p{
-	display: flex;
-	justify-content: space-around;
-	margin-left: 50px;
-  }
   
-  footer a{
-	font-family: Montserrat, sans-serif;
-	color: black;
-	text-decoration: none;
-	justify-content: end; 
-  }
  
-  @media screen and (min-width: 950px){
-	header{
-		grid-template-columns: 1fr 4fr;
-		align-items: center;
-		font-size: 25px;
-	}
-}
+ 
+  
 
 @media screen and (min-width: 1250px){
 	header{
@@ -337,4 +520,4 @@ input, select{
 		font-size: 25px;
 	}
 }
-
+---*/
