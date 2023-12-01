@@ -447,7 +447,6 @@ footer{
 	display: flex;
 	flex-direction: column;
 	text-align:center;
-	
 	background-color: var(--light-gray);
   }
 
@@ -465,18 +464,201 @@ footer{
 	text-decoration: none;
 	padding-top:10px;
 	padding-bottom: 10px;
-	
   }
 
 /*-------------- Media 950px ---------------*/
+/*-------------Media 950px-- Header-----------------*/
 
   @media screen and (min-width: 950px){
 	header{
-		grid-template-columns: 1fr 4fr;
 		align-items: center;
 		font-size: 25px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
+	header nav label{
+		display: none;
+	}
+	#logo {
+		position: absolute;
+		top: 0px;
+	}
+	header h1 {
+		padding-left: 230px;
+		padding-top: 25px;
+	}
+	header p {
+		padding-left: 230px;
+	}
+	header ul li a{
+		padding: 10px 10px;
+		background-color: var(--light-gray);
+		color: var(--black);
+	}
+	header ul li {
+		padding: 8px 8px;
+	}
+	header ul {
+		max-height: 300px;
+		
+		padding: 10px 10px;
+		background-color: transparent;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+/*------------Main---Media 950px------------------*/
+
+#intro{
+	color: var(--black);
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 30px;
 }
+
+#intro h2{
+	padding: 0px 20px;
+	font-size: 45px;
+	padding-top: 50px;
+	padding-left: 80px;
+}
+
+#intro p{
+	padding: 25px 20px;
+	font-size: 18px;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+#intro div{
+	padding-left: 60px;
+	padding-right: 75px;
+	width: 90%;
+}
+
+#img-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+	padding: 9 40px;
+}
+
+#img-grid img {
+    width: calc(50% - 5px); 
+    margin-bottom: 10px; 
+}
+
+#third-image {
+    width: calc(50% - 50px);
+}
+
+/*-----------Plan---Media 950px-------------------*/
+
+#plan h3{
+	padding: 0px 20px;
+	font-size: 45px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 80px;
+}
+
+#plan div{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*--------Testimonial-------Media 950px------------------*/
+
+#testimonials h3{
+	padding: 0px 20px;
+	font-size: 45px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 80px;
+}
+
+#testimonials div{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+/*--------About-------Media 950px------------------*/
+#about h3{
+	padding: 0px 20px;
+	font-size: 45px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 80px;
+}
+
+#about div{
+	display: flex;
+	flex-direction: row;
+	padding-left: 85px;
+	padding-right: 85px;
+	padding-bottom: 20px;
+}
+
+/*--------Contact-------Media 950px------------------*/
+#contact h3{
+	padding: 0px 20px;
+	font-size: 45px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 80px;
+}
+
+form{
+	padding-left: 60px;
+	padding-right: 90px;
+	padding-bottom: 20px;
+}
+
+#contact fieldset{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+#mySubmit{
+	display: flex;
+	justify-content: end;
+	padding-right: 90px;
+}
+
+/*--------Footer-------Media 950px------------------*/
+
+footer{
+	
+	display: flex;
+	flex-direction: row;
+	padding-left: 80px;
+	height:70px;
+  }
+
+  footer p{
+	display: flex;
+	justify-content: space-around;
+	margin-left: 50px;
+	padding-top:20px;
+	padding-right: 90px;
+	padding-bottom: 25px;
+  }
+  
+  footer a{
+	
+	padding-right: 75px;
+	padding-top:20px;
+	padding-bottom: 10px;
+  }	
+
+  
 /*---
 
 
